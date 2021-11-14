@@ -16,8 +16,8 @@ Basta baixar o arquivo em release. Últimos posts sempre aparecerão no hero (em
 
 ## Referências:
 
-1- [Advanced Custom Fields Pro](https://wordpress.org/plugins/advanced-custom-fields/)
-2- [Custom Post Type UI](https://br.wordpress.org/plugins/custom-post-type-ui/)
-3- [Foundation](https://get.foundation/index.html)
+- [Advanced Custom Fields Pro](https://wordpress.org/plugins/advanced-custom-fields/)
+- [Custom Post Type UI](https://br.wordpress.org/plugins/custom-post-type-ui/)
+- [Foundation](https://get.foundation/index.html)
 
 
