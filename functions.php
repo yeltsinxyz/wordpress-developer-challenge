@@ -2,6 +2,7 @@
 
 // Require
 require_once 'inc/custom-post.php';
+require_once 'inc/acf.php';
 
 // Include Scripts and CSS
 function buildbox_scripts() {
