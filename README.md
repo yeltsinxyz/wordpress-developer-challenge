@@ -14,6 +14,17 @@ Para instalação em ambiente de desenvolvimento: baixar pacote e rodar ```npm i
 
 Basta baixar o arquivo em release. Últimos posts sempre aparecerão no hero (em destaque). Os posts mais recentes aparecerão na home dependendo da categoria (taxonomia) utilizada.
 
+## TODO
+
+- [ ] Tornar a home e as páginas internas dinâmicas
+- [ ] Fazer o vídeo do single funcionar em um lightbox
+- [ ] Usar a imagem em destaque como principal
+- [ ] Verificar o menu e as cores do hover
+- [ ] Fazer a página ativa respeitar o estado .active
+- [ ] O bloco contendo o vídeo será todo um link
+- [ ] Menu dinâmico
+- [ ] Logo no hover muda de cor
+
 ## Referências:
 
 - [Advanced Custom Fields Pro](https://wordpress.org/plugins/advanced-custom-fields/)

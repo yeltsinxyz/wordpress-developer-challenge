@@ -26,7 +26,13 @@
 
                 <div class="cell small-12">
 
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/pexels-maxime-francis-2246476.jpg" alt="">
+                    <a href="">
+
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/pexels-maxime-francis-2246476.jpg" alt="">
+
+                        <div class="overlay"></div>
+
+                    </a>
 
                 </div>
 
