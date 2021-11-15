@@ -30,7 +30,131 @@
 
           <h3>Filmes</h3>
 
-          
+          <div class="movielist">
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              <h4>Proin sollicitudi</h4>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -48,6 +172,132 @@
 
           <h3>Documentários</h3>
 
+          <div class="movielist">
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              <h4>Proin sollicitudi</h4>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -63,6 +313,132 @@
         <div class="cell small-12">
 
           <h3>Séries</h3>
+
+          <div class="movielist">
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              <h4>Proin sollicitudi</h4>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+            <div>
+
+            <a href="">
+
+              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+
+              <span class="label">130m</span>
+
+              </a>
+
+            </div>
+
+          </div>
 
         </div>
 

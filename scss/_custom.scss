@@ -51,6 +51,13 @@ header {
     background-color: #000000E6;
     padding: 29px 0px;
 
+    @include breakpoint (medium down) {
+        h1 img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
     .menu {
         
         a {
@@ -59,9 +66,13 @@ header {
             transition: color ease-in-out 500ms;
 
             &:hover {
-                color: #CDCDCD;
+                color: #FF0000;
             }
 
+        }
+
+        .active {
+            color: #FF0000;
         }
 
     }
@@ -101,6 +112,11 @@ header {
         line-height: 1;
         margin: 40px 0px;
         color: #FFF;
+
+        @include breakpoint (medium down) {
+            font-size: 50px;
+        }
+
     }
 
     .button {
@@ -108,6 +124,10 @@ header {
         padding: 20px 78px;
         transition: all ease-in-out 500ms;
         border-radius: 3px;
+
+        @include breakpoint (medium down) {
+            padding: 20px 40px;
+        }
 
         &:hover {
             background-color: #FFF;
@@ -118,17 +138,115 @@ header {
 
 }
 
+#movies {
+    padding: 60px 0px 30px 0px;
+}
+
+#docs,
+#series {
+    padding: 30px 0px;
+}
+
 #movies,
 #docs,
 #series {
     background-color: #000;
-    padding: 60px 0px;
 
     h3 {
         color: #FF0000;
         font-family: 'Circular Black';
         font-size: 32px;
         letter-spacing: -1px;
+    }
+
+    .slick-slide {
+        padding: 10px;
+
+        img {
+            padding-bottom: 20px;
+        }
+
+        .label {
+            background-color: transparent;
+            color: #FFF;
+            border-radius: 3px;
+            border: solid 1px #FFF;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 16px;
+            color: #FFF;
+            font-family: 'Circular Black';
+        }
+
+    }
+
+}
+
+#mainContent {
+    background-color: #000000E6;
+    padding: 70px 0px;
+
+    h2 {
+        color: #FF0000;
+        font-family: 'Circular Black';
+        font-size: 32px;
+    }
+
+    p {
+        color: #FFF;
+        font-family: 'Circular Medium';
+        font-size: 16px;
+    }
+
+    .label {
+        background-color: transparent;
+        border: solid 1px #FFF;
+        border-radius: 3px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: #FFF;
+        font-family: 'Circular Black';
+        font-size: 20px;
+    }
+
+}
+
+#footerMenu {
+    background-color: #121212;
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 20px 0px;
+
+    @include breakpoint(medium up) {
+        display: none;
+    }
+    
+    a {
+        color: #FFF;
+
+        &:hover {
+            color: #FF0000;
+        }
+
+    }
+
+    .active {
+        color: #FF0000;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 24px;
+        height: 24px;
     }
 
 }
@@ -138,8 +256,19 @@ footer {
     padding: 110px 0px;
     color: #FFF;
 
+    @include breakpoint(medium down) {
+        text-align: center;
+        font-size: 12px;
+    }
+
     img {
         padding-bottom: 20px;
+
+        @include breakpoint(medium down) {
+            display: block;
+            margin: 0 auto;
+        }
+
     }
 
 }
