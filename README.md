@@ -16,10 +16,12 @@ Basta baixar o arquivo em release. Últimos posts sempre aparecerão no hero (em
 
 ## TODO
 
-- [ ] Tornar a home e as páginas internas dinâmicas
+- [x] Tornar a home e as páginas internas dinâmicas
+- [ ] Tonar a single dinâmica
+- [ ] Exibir descrição da taxonomia
 - [ ] Fazer o vídeo do single funcionar em um lightbox
-- [ ] Usar a imagem em destaque como principal
-- [ ] Verificar o menu e as cores do hover
+- [x] Usar a imagem em destaque como principal
+- [x] Verificar o menu e as cores do hover
 - [ ] Fazer a página ativa respeitar o estado .active
 - [ ] O bloco contendo o vídeo será todo um link
 - [ ] Menu dinâmico

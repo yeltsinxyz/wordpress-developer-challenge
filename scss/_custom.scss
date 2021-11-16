@@ -91,12 +91,16 @@ header {
     }
 
     .label {
-        padding: 6px 26px;
         background-color: #FFF;
         color: #000;
         border-radius: 3px;
         margin-right: 5px;
         border: solid 1px #FFF;
+
+        a {
+            padding: 6px 26px;
+            color: #000;
+        }
     }
 
     .label-alt {

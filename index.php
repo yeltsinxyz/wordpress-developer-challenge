@@ -1,25 +1,6 @@
 <?php get_header(); ?>
 
-  <section id="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<?php echo get_template_directory_uri() ?>/img/pexels-maxime-francis-2246476.jpg'); background-size: cover;">
-
-    <div class="grid-container">
-
-      <div class="grid-x">
-
-        <div class="cell small-12 large-6">
-
-          <span class="label">Filmes</span> <span class="label label-alt">130m</span>
-
-          <h2>Pellentesque habitant morbi</h2>
-
-          <a href="" class="button">Mais informações</a>
-
-        </div>
-
-      </div>
-    </div>
-
-  </section>
+  <?php include_once('sections/hero.php'); ?>
 
   <section id="movies">
 
@@ -32,127 +13,51 @@
 
           <div class="movielist">
 
-            <div>
+            <?php 
+            // WP_Query arguments
+            $args = array(
+              'post_type'              => array( 'video' ),
+              'nopaging'               => true,
+              'posts_per_page'         => '30',
+              'tax_query'              => array(
+                'relation' => 'AND',
+                array(
+                  'taxonomy'         => 'tipo',
+                  'terms'            => 'filmes',
+                  'field'            => 'slug',
+                ),
+              ),
+            );
 
-            <a href="">
+            // The Query
+            $filmeshome = new WP_Query( $args );
 
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+            // The Loop
+            if ( $filmeshome->have_posts() ) {
+              while ( $filmeshome->have_posts() ) {
+                $filmeshome->the_post();
+            ?>
+              <div>
 
-              <span class="label">130m</span>
+                <a href="<?php the_permalink(); ?>">
 
-              <h4>Proin sollicitudi</h4>
+                <?php the_post_thumbnail( 'thumbnail-home' );  ?>
 
-              </a>
+                <span class="label"><?php the_field('tempo_de_duracao'); ?>m</span>
 
-            </div>
+                <h4><?php the_title(); ?></h4>
 
-            <div>
+                </a>
 
-            <a href="">
+              </div>
+              <?php }
+              } else {
+                // no posts found
+              }
 
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
+              // Restore original Post Data
+              wp_reset_postdata();
+              ?>
 
           </div>
 
@@ -174,127 +79,51 @@
 
           <div class="movielist">
 
-            <div>
+            <?php 
+            // WP_Query arguments
+            $args = array(
+              'post_type'              => array( 'video' ),
+              'nopaging'               => true,
+              'posts_per_page'         => '30',
+              'tax_query'              => array(
+                'relation' => 'AND',
+                array(
+                  'taxonomy'         => 'tipo',
+                  'terms'            => 'documentarios',
+                  'field'            => 'slug',
+                ),
+              ),
+            );
 
-            <a href="">
+            // The Query
+            $documentariosHome = new WP_Query( $args );
 
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+            // The Loop
+            if ( $documentariosHome->have_posts() ) {
+              while ( $documentariosHome->have_posts() ) {
+                $documentariosHome->the_post();
+            ?>
+              <div>
 
-              <span class="label">130m</span>
+                <a href="<?php the_permalink(); ?>">
 
-              <h4>Proin sollicitudi</h4>
+                <?php the_post_thumbnail( 'thumbnail-home' );  ?>
 
-              </a>
+                <span class="label"><?php the_field('tempo_de_duracao'); ?>m</span>
 
-            </div>
+                <h4><?php the_title(); ?></h4>
 
-            <div>
+                </a>
 
-            <a href="">
+              </div>
+              <?php }
+              } else {
+                // no posts found
+              }
 
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
+              // Restore original Post Data
+              wp_reset_postdata();
+              ?>
 
           </div>
 
@@ -316,127 +145,51 @@
 
           <div class="movielist">
 
-            <div>
+            <?php 
+            // WP_Query arguments
+            $args = array(
+              'post_type'              => array( 'video' ),
+              'nopaging'               => true,
+              'posts_per_page'         => '30',
+              'tax_query'              => array(
+                'relation' => 'AND',
+                array(
+                  'taxonomy'         => 'tipo',
+                  'terms'            => 'series',
+                  'field'            => 'slug',
+                ),
+              ),
+            );
 
-            <a href="">
+            // The Query
+            $seriesHome = new WP_Query( $args );
 
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
+            // The Loop
+            if ( $seriesHome->have_posts() ) {
+              while ( $seriesHome->have_posts() ) {
+                $seriesHome->the_post();
+            ?>
+              <div>
 
-              <span class="label">130m</span>
+                <a href="<?php the_permalink(); ?>">
 
-              <h4>Proin sollicitudi</h4>
+                <?php the_post_thumbnail( 'thumbnail-home' );  ?>
 
-              </a>
+                <span class="label"><?php the_field('tempo_de_duracao'); ?>m</span>
 
-            </div>
+                <h4><?php the_title(); ?></h4>
 
-            <div>
+                </a>
 
-            <a href="">
+              </div>
+              <?php }
+              } else {
+                // no posts found
+              }
 
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
-
-            <div>
-
-            <a href="">
-
-              <img src="<?php echo get_template_directory_uri() ?>/img/pexels-zachary-debottis-2568539.jpg" alt="">
-
-              <span class="label">130m</span>
-
-              </a>
-
-            </div>
+              // Restore original Post Data
+              wp_reset_postdata();
+              ?>
 
           </div>
 
