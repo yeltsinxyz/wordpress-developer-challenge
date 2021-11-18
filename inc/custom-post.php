@@ -112,7 +112,7 @@ function cptui_register_my_taxes() {
 		"labels" => $labels,
 		"public" => true,
 		"publicly_queryable" => true,
-		"hierarchical" => false,
+		"hierarchical" => true,
 		"show_ui" => true,
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
@@ -128,54 +128,5 @@ function cptui_register_my_taxes() {
 	];
 	register_taxonomy( "tipo", [ "video" ], $args );
 
-	/**
-	 * Taxonomy: Gêneros.
-	 */
-
-	$labels = [
-		"name" => __( "Gêneros", "custom-post-type-ui" ),
-		"singular_name" => __( "Gênero", "custom-post-type-ui" ),
-		"menu_name" => __( "Gêneros", "custom-post-type-ui" ),
-		"all_items" => __( "Todos os Gêneros", "custom-post-type-ui" ),
-		"edit_item" => __( "Editar Gênero", "custom-post-type-ui" ),
-		"view_item" => __( "Ver Gênero", "custom-post-type-ui" ),
-		"update_item" => __( "Atualizar nome do Gênero", "custom-post-type-ui" ),
-		"add_new_item" => __( "Adicionar novo Gênero", "custom-post-type-ui" ),
-		"new_item_name" => __( "Novo Gênero", "custom-post-type-ui" ),
-		"parent_item" => __( "Gênero ascendente", "custom-post-type-ui" ),
-		"parent_item_colon" => __( "Gênero ascendente:", "custom-post-type-ui" ),
-		"search_items" => __( "Pesquisar Gêneros", "custom-post-type-ui" ),
-		"popular_items" => __( "Gêneros mais populares", "custom-post-type-ui" ),
-		"separate_items_with_commas" => __( "Separe Gêneros com vírgulas", "custom-post-type-ui" ),
-		"add_or_remove_items" => __( "Adicionar ou excluir Gêneros", "custom-post-type-ui" ),
-		"choose_from_most_used" => __( "Escolher entre os termos mais usados de Gêneros", "custom-post-type-ui" ),
-		"not_found" => __( "Nenhum Gêneros encontrado", "custom-post-type-ui" ),
-		"no_terms" => __( "Nenhum Gêneros", "custom-post-type-ui" ),
-		"items_list_navigation" => __( "Navegação na lista de Gêneros", "custom-post-type-ui" ),
-		"items_list" => __( "Lista de Gêneros", "custom-post-type-ui" ),
-		"back_to_items" => __( "Voltar para Gêneros", "custom-post-type-ui" ),
-	];
-
-	
-	$args = [
-		"label" => __( "Gêneros", "custom-post-type-ui" ),
-		"labels" => $labels,
-		"public" => true,
-		"publicly_queryable" => true,
-		"hierarchical" => false,
-		"show_ui" => true,
-		"show_in_menu" => true,
-		"show_in_nav_menus" => true,
-		"query_var" => true,
-		"rewrite" => [ 'slug' => 'genero', 'with_front' => true, ],
-		"show_admin_column" => false,
-		"show_in_rest" => true,
-		"show_tagcloud" => false,
-		"rest_base" => "genero",
-		"rest_controller_class" => "WP_REST_Terms_Controller",
-		"show_in_quick_edit" => false,
-		"show_in_graphql" => false,
-	];
-	register_taxonomy( "genero", [ "video" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes' );
